@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cartel dos Cortes - Testes Automatizados" verbose="2">
+    <test name="CT01 - Login no painel">
+        <classes><class name="LoginTest"/></classes>
+    </test>
+    <test name="CT02 - Agendamento online">
+        <classes><class name="AgendamentoOnlineTest"/></classes>
+    </test>
+    <test name="CT03 - Meu agendamento (cliente)">
+        <classes><class name="MeuAgendamentoTest"/></classes>
+    </test>
+    <test name="CT04 - Receber atendimento">
+        <classes><class name="ReceberAtendimentoTest"/></classes>
+    </test>
+</suite>

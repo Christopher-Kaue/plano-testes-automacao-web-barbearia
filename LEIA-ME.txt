@@ -1,0 +1,26 @@
+TESTES AUTOMATIZADOS - CARTEL DOS CORTES
+========================================
+
+Esta pasta e SEPARADA do sistema em producao. Nada aqui altera o site no ar.
+
+  sistema-copia\        Copia do sistema, SO para teste. Sem .git e sem ligacao com a Vercel.
+                        Ganhou "id" nos campos das telas (para o Selenium achar os elementos).
+                        Usa o banco local "cartel_dos_cortes_teste" (o .env.local dela aponta para ele).
+  ProjetoTesteCartel\   Projeto Java (Maven + Selenium + TestNG), no mesmo modelo da aula:
+                        BaseTest, BasePage, Page Objects e classes de teste.
+  ferramentas\          Maven 3.9.9 (para rodar sem instalar nada).
+
+COMO RODAR
+  1) Clique duas vezes em 1-iniciar-sistema-teste.bat e espere aparecer "Ready". Deixe a janela aberta.
+  2) Clique duas vezes em 2-executar-testes.bat. O Edge abre sozinho e executa os 14 casos.
+  3) O relatorio fica em ProjetoTesteCartel\target\surefire-reports\index.html
+
+No IntelliJ: File > Open > ProjetoTesteCartel (pom.xml). Clique com o botao direito em testng.xml > Run.
+(O sistema de teste do passo 1 precisa estar rodando.)
+
+SEGURANCA
+  - Antes de cada execucao, os testes APAGAM e recriam os dados do banco de teste (massa-de-dados.sql).
+  - O codigo Java se recusa a rodar se o banco nao terminar com "_teste" ou nao for local (BancoDeTeste.java).
+  - Nunca troque url.base (config.properties) pelo endereco do site publicado.
+
+REQUISITOS: Java 17+, Microsoft Edge, PostgreSQL local rodando, Node.js (para o passo 1).

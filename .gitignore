@@ -1,0 +1,7 @@
+# Fora do repositorio: copia do sistema, Maven embutido e arquivos gerados
+sistema-copia/
+ferramentas/
+.github/
+ProjetoTesteCartel/target/
+.idea/
+*.iml
